@@ -72,7 +72,7 @@ def send_birthdaywish():
     print birthday_list
     today = datetime.date.today()
     print today
-    birthday_wishes_sent = "Today’s birthday list:\n"
+    birthday_wishes_sent = "Today's birthday list:\n"
     for contact_detail in birthday_list:
         birthday = contact_detail[2]
         date_object = datetime.datetime.strptime(birthday, "%m-%d-%Y")
