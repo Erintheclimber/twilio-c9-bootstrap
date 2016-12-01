@@ -55,7 +55,7 @@ def sms():
     #     return str(resp) 
     
     for contact_detail in birthday_list:
-        phone_number = contact_detail[4] 
+        phone_number = "+1" + contact_detail[4] 
         print phone_number
         if from_number == phone_number:
             first_name = contact_detail[0]
@@ -64,6 +64,7 @@ def sms():
             print message_body
             client.messages.create(to="+15108473180", from_="+14158021733",
                                    body=message_body)
+    return "Forwarded message to Erin"
             
 @app.route('/messages', methods=['GET'])
 def send_birthdaywish():
