@@ -56,10 +56,12 @@ def sms():
     
     for contact_detail in birthday_list:
         phone_number = contact_detail[4] 
+        print phone_number
         if from_number == phone_number:
             first_name = contact_detail[0]
             last_name = contact_detail[1]
             message_body = first_name + " " + last_name + " sent " + message_response
+            print message_body
             client.messages.create(to="+15108473180", from_="+14158021733",
                                    body=message_body)
             
