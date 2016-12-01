@@ -40,9 +40,11 @@ numbers = ['+16144775689']
 @app.route('/messages', methods=['POST'])
 def sms():
     """Respond to incoming calls with a simple text message."""
+    print "in POST message"
     print(request.values)
     from_number = request.values.get('From')
     message_response = request.values.get('Body')
+    print from_number, message_response
     # if number in numbers:
     #     resp = twilio.twiml.Response()
     #     resp.message("Hi, Karthik")
